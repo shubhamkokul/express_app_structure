@@ -1,12 +1,9 @@
-const express = require("express")
-const app = express()
+const express = require("express");
+const app = express();
+const port = 8000;
 
-app.engine('html', require('ejs').renderFile);
-app.set('view engine', 'html');
-app.set('views', __dirname);
+app.use("/", require("./src/routes/root"))
 
-app.get("/", (req, res) => {
-    res.render('views/index')
-})
-
-app.listen(3000)
+app.listen(port, () =>
+    console.log(`App listening at http://localhost:${port}`)
+);
