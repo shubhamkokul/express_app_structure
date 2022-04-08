@@ -1,6 +1,6 @@
 
 function handleRootGet(req, res) {
-    res.send("Node is running")
+    return res.sendStatus(200)
 }
 
 module.exports = {
