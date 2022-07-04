@@ -4,8 +4,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "devStart": "set NODE_ENV=development nodemon server.js",
-    "prod": "set NODE_ENV=production node server.js"
+    "devStart": "nodemon server.js development",
+    "prod": "node server.js production"
   },
   "keywords": [],
   "author": "castielrdx",
