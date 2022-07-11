@@ -1,9 +1,10 @@
 const express = require("express");
-const config = require("./src/configs/config");
+const config = require("./config");
 const app = express();
+const port = config.PORT
 
-app.use("/", require("./src/routes/root"))
+app.use(express.json())
 
-app.listen(config.PORT, () =>
-    console.log(`App listening at http://localhost:${config.PORT}`)
+app.listen(port, () =>
+    console.log(`App listening at http://localhost:${port}`)
 );
