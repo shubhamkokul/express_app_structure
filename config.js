@@ -1,6 +1,6 @@
 const dotenv = require('dotenv');
 const path = require('path');
-const configVar = 3;
+const configVar = 2;
 
 dotenv.config({
   path: path.resolve(__dirname, process.argv[configVar] + '.env')
