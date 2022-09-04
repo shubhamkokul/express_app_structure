@@ -4,10 +4,12 @@ const cors = require("cors")
 const port = config.PORT;
 
 const app = express();
+app.use(cors());
+app.use(express.json());
 
 app.set('views', __dirname + '/src/views');
 app.engine('html', require('ejs').renderFile);
-app.use(express.json())
+
 
 app.use("/", require("./src/routes/routes"));
 
